@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Image -->
+    <div class="background-overlay"></div>
+
+    <!-- Content to Blur -->
+    <div class="content">
+
+        <!-- Header with Company Name and Menu Button -->
+        <header class="header">
+            <h1 class="company-name">Centimo</h1>
+            <button class="menu-btn" onclick="openMenu()">&#9776;</button>
+        </header>
+
+        <!-- Side Menu -->
+        <nav id="sideMenu" class="side-menu">
+            <button class="close-btn" onclick="closeMenu()">&times;</button>
+            <div class="menu-links">
+                <a href="home1.html">Logout</a>
+                <a href="about.html">About Us</a>
+                <a href="softwares.html">Softwares Used</a>
+                <a href="\feedb.html">Feedback</a>
+            </div>
+        </nav>
+
+        <!-- Banners Section -->
+        <section class="banner-section">
+            <a href="analysis.html" class="banner">
+                <img src="/images/2.png" alt="Analysis" class="banner-image">
+                <p class="banner-text">How the analysis is done</p>
+            </a>
+            <a href="softwares.html" class="banner">
+                <img src="/images/3.png" alt="Softwares" class="banner-image">
+                <p class="banner-text">Softwares used</p>
+            </a>
+            <a href="dashboard.html" class="banner">
+                <img src="/images/4.png" alt="Softwares" class="banner-image">
+                <p class="banner-text">Start Analysis</p>
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Sentiment. All rights reserved.</p>
+            <p><a href="contact.html">Contact Us</a></p>
+        </footer>
+    </div>
+
+    <script>
+        function openMenu() {
+            document.getElementById("sideMenu").classList.add("show");
+            document.querySelector(".background-overlay").classList.add("blur");
+            document.querySelector(".menu-btn").style.display = 'none';
+            document.querySelector(".banner-section").classList.add("blur");
+            document.querySelector(".footer").classList.add("blur"); 
+        }
+        
+        function closeMenu() {
+            document.getElementById("sideMenu").classList.remove("show");
+            document.querySelector(".background-overlay").classList.remove("blur");
+            document.querySelector(".menu-btn").style.display = 'block';
+            document.querySelector(".banner-section").classList.remove("blur");
+            document.querySelector(".footer").classList.remove("blur"); 
+        }
+    </script>
+</body>
+</html>

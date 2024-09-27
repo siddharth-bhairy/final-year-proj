@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styls.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-half">
+            <div class="image-container">
+                <img src="abc.png" alt="Background Image">
+            </div>
+        </div>
+        <div class="right-half">
+            <h1>Feel free to drop us your feedback.</h1>
+            
+            <form id="feedbackForm">
+                <div class="rating">
+                    <label for="satisfaction">How satisfied are you with the overall analysis?</label>
+                    <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5">
+                    <div class="range-labels">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span>10</span>
+                        <br>
+                    </div>
+                </div>
+
+                <div class="comments">
+                    <textarea id="reason" placeholder="Please tell us your reasons for giving this score here..."></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+
+            <div class="logos">
+                <i class="fab fa-youtube">&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                <i class="fab fa-twitter">&nbsp;&nbsp;&nbsp;</i>
+                <i class="fab fa-amazon"></i>
+            </div>
+        </div>
+    </div>
+    <script src="scrpt.js"></script>
+</body>
+</html>

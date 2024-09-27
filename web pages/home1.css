@@ -1,0 +1,167 @@
+/* Resetting some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background image setup */
+body {
+    font-family: cursive;
+    overflow: hidden;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/abstrct.jpg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: 1;
+    transition: filter 0.3s;
+}
+
+/* Blurred content when side menu opens */
+.blur {
+    filter: blur(5px);
+}
+
+/* Header styling */
+.header {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    text-align: center;
+}
+
+#here
+{
+    padding:5px;
+    color:white;
+}
+
+.company-name {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 32px;
+    color: rgb(249, 247, 245);
+}
+
+/* Hamburger button */
+.menu-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: transparent;
+    color: #eff5ef;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* Side menu styling */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: transparent;
+    transition: right 0.3s ease;
+    z-index: 4;
+    padding: 20px;
+}
+
+.side-menu.show {
+    right: 0;
+}
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    text-decoration: none;
+}
+
+/* Menu links */
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.menu-links a {
+    font-size: 24px;
+    color: rgb(255, 253, 249);
+    text-decoration: none;
+    margin: 20px 0;
+    font-weight: bold;
+    transition: transform 0.3s, text-decoration 0.3s;
+}
+
+.menu-links a:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+/* Input section styling */
+.input-section {
+    margin: 100px auto;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.url-input {
+    width: 60%;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.url-input:focus {
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+/* Footer */
+.footer {
+    position: fixed; /* Fixes the footer to the bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Ensures it appears above other elements */
+}
+
+.footer p {
+    margin: 5px 0;
+    color: #4CAF50;
+}
+
+.footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
